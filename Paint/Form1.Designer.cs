@@ -35,7 +35,7 @@
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewRepositoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewOnlineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panelPaint = new System.Windows.Forms.Panel();
             this.btnClearAll = new System.Windows.Forms.Button();
@@ -59,7 +59,6 @@
             this.btnEraser = new System.Windows.Forms.Button();
             this.btnPen = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.viewOnlineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -76,8 +75,7 @@
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.viewRepositoryToolStripMenuItem,
-            this.aboutToolStripMenuItem});
+            this.viewRepositoryToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1370, 24);
@@ -97,21 +95,21 @@
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -124,12 +122,12 @@
             this.viewRepositoryToolStripMenuItem.Text = "Repository";
             this.viewRepositoryToolStripMenuItem.Click += new System.EventHandler(this.viewRepositoryToolStripMenuItem_Click);
             // 
-            // aboutToolStripMenuItem
+            // viewOnlineToolStripMenuItem
             // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.aboutToolStripMenuItem.Text = "About";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            this.viewOnlineToolStripMenuItem.Name = "viewOnlineToolStripMenuItem";
+            this.viewOnlineToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.viewOnlineToolStripMenuItem.Text = "View Online Repo";
+            this.viewOnlineToolStripMenuItem.Click += new System.EventHandler(this.viewOnlineToolStripMenuItem_Click);
             // 
             // splitContainer1
             // 
@@ -437,13 +435,6 @@
             this.btnPen.UseVisualStyleBackColor = true;
             this.btnPen.Click += new System.EventHandler(this.btnPen_Click);
             // 
-            // viewOnlineToolStripMenuItem
-            // 
-            this.viewOnlineToolStripMenuItem.Name = "viewOnlineToolStripMenuItem";
-            this.viewOnlineToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.viewOnlineToolStripMenuItem.Text = "View Online Repo";
-            this.viewOnlineToolStripMenuItem.Click += new System.EventHandler(this.viewOnlineToolStripMenuItem_Click);
-            // 
             // MsPaint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -503,7 +494,6 @@
         private System.Windows.Forms.ToolStripMenuItem viewRepositoryToolStripMenuItem;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ToolStripMenuItem viewOnlineToolStripMenuItem;

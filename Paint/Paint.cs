@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using System.IO;
 using System.Text.RegularExpressions;
 using Shapes;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+
 
 namespace Paint
 {    
@@ -900,12 +903,20 @@ namespace Paint
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            {
+                MessageBox.Show("ObjectCreator Version 1.0");
+                loadCommand();
+            }
         }
 
         private void viewOnlineToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            IWebDriver driver = new ChromeDriver();
 
+            driver.Url = ("https://github.com/login");
+
+            driver.FindElement(By.Id("login_field")).SendKeys("koolrik");
+            driver.FindElement(By.Id("password")).SendKeys("Koolrik1590");
         }
 
         private void DrawRectangle(int width, int height)
