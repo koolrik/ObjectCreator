@@ -903,6 +903,11 @@ namespace Paint
 
         }
 
+        private void viewOnlineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void DrawRectangle(int width, int height)
         {            
             Pen myPen = new Pen(mainColor);

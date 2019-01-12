@@ -38,3 +38,13 @@ C:\Users\admin\Downloads\ObjectCreator\Paint\obj\Debug\Paint.csproj.GenerateReso
 C:\Users\admin\Downloads\ObjectCreator\Paint\obj\Debug\Paint.csproj.CoreCompileInputs.cache
 C:\Users\admin\Downloads\ObjectCreator\Paint\obj\Debug\Paint.exe
 C:\Users\admin\Downloads\ObjectCreator\Paint\obj\Debug\Paint.pdb
+C:\Users\admin\source\repos\koolrik\ObjectCreator\Paint\bin\Debug\Paint.exe.config
+C:\Users\admin\source\repos\koolrik\ObjectCreator\Paint\bin\Debug\Paint.exe
+C:\Users\admin\source\repos\koolrik\ObjectCreator\Paint\bin\Debug\Paint.pdb
+C:\Users\admin\source\repos\koolrik\ObjectCreator\Paint\obj\Debug\Paint.csprojAssemblyReference.cache
+C:\Users\admin\source\repos\koolrik\ObjectCreator\Paint\obj\Debug\Paint.MsPaint.resources
+C:\Users\admin\source\repos\koolrik\ObjectCreator\Paint\obj\Debug\Paint.Properties.Resources.resources
+C:\Users\admin\source\repos\koolrik\ObjectCreator\Paint\obj\Debug\Paint.csproj.GenerateResource.cache
+C:\Users\admin\source\repos\koolrik\ObjectCreator\Paint\obj\Debug\Paint.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\koolrik\ObjectCreator\Paint\obj\Debug\Paint.exe
+C:\Users\admin\source\repos\koolrik\ObjectCreator\Paint\obj\Debug\Paint.pdb

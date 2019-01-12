@@ -48,7 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChromeDriver.cs" />
     <Compile Include="Circle.cs" />
+    <Compile Include="IWebDriver.cs" />
     <Compile Include="NonDigitValueException.cs" />
     <Compile Include="Paint.cs">
       <SubType>Form</SubType>

@@ -59,6 +59,7 @@
             this.btnEraser = new System.Windows.Forms.Button();
             this.btnPen = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.viewOnlineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -116,9 +117,11 @@
             // 
             // viewRepositoryToolStripMenuItem
             // 
+            this.viewRepositoryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewOnlineToolStripMenuItem});
             this.viewRepositoryToolStripMenuItem.Name = "viewRepositoryToolStripMenuItem";
-            this.viewRepositoryToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
-            this.viewRepositoryToolStripMenuItem.Text = "View Repository";
+            this.viewRepositoryToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.viewRepositoryToolStripMenuItem.Text = "Repository";
             this.viewRepositoryToolStripMenuItem.Click += new System.EventHandler(this.viewRepositoryToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
@@ -434,6 +437,13 @@
             this.btnPen.UseVisualStyleBackColor = true;
             this.btnPen.Click += new System.EventHandler(this.btnPen_Click);
             // 
+            // viewOnlineToolStripMenuItem
+            // 
+            this.viewOnlineToolStripMenuItem.Name = "viewOnlineToolStripMenuItem";
+            this.viewOnlineToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewOnlineToolStripMenuItem.Text = "View Online";
+            this.viewOnlineToolStripMenuItem.Click += new System.EventHandler(this.viewOnlineToolStripMenuItem_Click);
+            // 
             // MsPaint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -496,6 +506,7 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ToolStripMenuItem viewOnlineToolStripMenuItem;
     }
 }
 
