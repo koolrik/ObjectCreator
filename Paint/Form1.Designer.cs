@@ -441,7 +441,7 @@
             // 
             this.viewOnlineToolStripMenuItem.Name = "viewOnlineToolStripMenuItem";
             this.viewOnlineToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.viewOnlineToolStripMenuItem.Text = "View Online";
+            this.viewOnlineToolStripMenuItem.Text = "View Online Repo";
             this.viewOnlineToolStripMenuItem.Click += new System.EventHandler(this.viewOnlineToolStripMenuItem_Click);
             // 
             // MsPaint
