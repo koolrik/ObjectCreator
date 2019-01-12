@@ -365,7 +365,7 @@
             this.cboSize.FormattingEnabled = true;
             this.cboSize.Location = new System.Drawing.Point(292, 66);
             this.cboSize.Name = "cboSize";
-            this.cboSize.Size = new System.Drawing.Size(121, 21);
+            this.cboSize.Size = new System.Drawing.Size(184, 21);
             this.cboSize.TabIndex = 2;
             this.cboSize.SelectedIndexChanged += new System.EventHandler(this.cboSize_SelectedIndexChanged);
             // 
