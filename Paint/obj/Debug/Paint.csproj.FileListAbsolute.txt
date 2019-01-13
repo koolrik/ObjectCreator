@@ -48,3 +48,8 @@ C:\Users\admin\source\repos\koolrik\ObjectCreator\Paint\obj\Debug\Paint.csproj.G
 C:\Users\admin\source\repos\koolrik\ObjectCreator\Paint\obj\Debug\Paint.csproj.CoreCompileInputs.cache
 C:\Users\admin\source\repos\koolrik\ObjectCreator\Paint\obj\Debug\Paint.exe
 C:\Users\admin\source\repos\koolrik\ObjectCreator\Paint\obj\Debug\Paint.pdb
+C:\Users\admin\Source\Repos\koolrik\ObjectCreator\Paint\bin\Debug\WebDriver.dll
+C:\Users\admin\Source\Repos\koolrik\ObjectCreator\Paint\bin\Debug\WebDriver.Support.dll
+C:\Users\admin\Source\Repos\koolrik\ObjectCreator\Paint\bin\Debug\WebDriver.xml
+C:\Users\admin\Source\Repos\koolrik\ObjectCreator\Paint\bin\Debug\WebDriver.Support.xml
+C:\Users\admin\Source\Repos\koolrik\ObjectCreator\Paint\obj\Debug\Paint.csproj.CopyComplete

@@ -49,3 +49,5 @@ C:\Users\admin\Source\Repos\koolrik\ObjectCreator\PaintTests\obj\Debug\PaintTest
 C:\Users\admin\Source\Repos\koolrik\ObjectCreator\PaintTests\obj\Debug\PaintTests.csproj.CopyComplete
 C:\Users\admin\Source\Repos\koolrik\ObjectCreator\PaintTests\obj\Debug\PaintTests.dll
 C:\Users\admin\Source\Repos\koolrik\ObjectCreator\PaintTests\obj\Debug\PaintTests.pdb
+C:\Users\admin\Source\Repos\koolrik\ObjectCreator\PaintTests\bin\Debug\WebDriver.dll
+C:\Users\admin\Source\Repos\koolrik\ObjectCreator\PaintTests\bin\Debug\WebDriver.xml
