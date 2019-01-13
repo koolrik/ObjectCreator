@@ -51,6 +51,10 @@ namespace Paint
             pen.StartCap = pen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
             addPenSizes();
         }
+        
+        /**
+		 * Redraws shape to corresponding mouse pointer
+		 */
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             switch (keyData)
@@ -61,12 +65,19 @@ namespace Paint
             }
             return base.ProcessCmdKey(ref msg, keyData);
         }
+
+        /**
+		 * Declare pen Size
+		 */
         private void addPenSizes() {
             cboSize.Items.Clear();
             cboSize.Items.AddRange(new String[] {"1", "2", "4", "6", "8"});
             cboSize.SelectedIndex = 0;
         }
 
+        /**
+		 * Declare drawing size
+		 */
         private void addDrawingSizes()
         {
             cboSize.Items.Clear();
@@ -74,6 +85,11 @@ namespace Paint
             cboSize.SelectedIndex = 0;
         }
 
+        /// <summary>
+		/// Loads panel to initiate paint or display dimention provided from the code
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
         private void MsPaint_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
@@ -82,6 +98,9 @@ namespace Paint
             panelPaint.Cursor = new Cursor(Properties.Resources.pen.GetHicon());
         }
 
+        /**
+		 * Selects Color
+		 */
         private void btnChooseColor_Click(object sender, EventArgs e)
         {
             if (colorDialog1.ShowDialog() != DialogResult.Cancel) {
@@ -91,6 +110,9 @@ namespace Paint
             pen = new Pen(mainColor, size);
         }
 
+        /**
+		 * changes mouse cursor to pen
+		 */
         private void btnPen_Click(object sender, EventArgs e)
         {
             cboSize.Enabled = true;
@@ -102,6 +124,9 @@ namespace Paint
 
         }
 
+        /**
+		 * changes mouse cursor to eraser
+		 */
         private void btnEraser_Click(object sender, EventArgs e)
         {
             active = "eraser";            
@@ -112,6 +137,9 @@ namespace Paint
 
         }
 
+        /**
+		 * Draws a rectangle
+		 */
         private void btnRectangle_Click(object sender, EventArgs e)
         {
             active = "rectangle";
@@ -122,6 +150,9 @@ namespace Paint
             cboSize.Enabled = true;
         }
 
+        /**
+		 * Draws a triangle
+		 */
         private void btnTriangle_Click(object sender, EventArgs e)
         {
             active = "triangle";
@@ -132,6 +163,9 @@ namespace Paint
             cboSize.Enabled = true;
         }
 
+        /**
+		 * Draws a circle
+		 */
         private void btnCircle_Click(object sender, EventArgs e)
         {
             active = "circle";
@@ -141,6 +175,10 @@ namespace Paint
             addDrawingSizes();
             cboSize.Enabled = true;
         }
+
+        /**
+		 * Draws a polygon
+		 */
         private void btnPolygon_click(object sender, EventArgs e)
         {
             active = "polygon";
@@ -151,6 +189,10 @@ namespace Paint
             cboSize.Enabled = true;
         }
 
+
+        /**
+		 * Sets Border Color for buttons
+		 */
         private void setAllBorderColorForButtons()
         {
             btnPen.FlatAppearance.BorderColor = btnBorderColor;
@@ -161,6 +203,9 @@ namespace Paint
             btnPolygon.FlatAppearance.BorderColor = btnBorderColor;
         }
 
+        /**
+		 * Remove boarder from buttons
+		 */
         private void removeAllBorderFromButtons()
         {
             btnPen.FlatAppearance.BorderSize = 0;
@@ -170,6 +215,10 @@ namespace Paint
             btnCircle.FlatAppearance.BorderSize = 0;
             btnPolygon.FlatAppearance.BorderSize = 0;
         }
+
+        /**
+		 * Painting on paint panel
+		 */
         private void panelPaint_MouseDown(object sender, MouseEventArgs e)
         {
             moving = true;
@@ -177,6 +226,9 @@ namespace Paint
             y = e.Y;
         }
 
+        /**
+		 * Doesnot paint on panel when mouse is not clicked
+		 */
         private void panelPaint_MouseUp(object sender, MouseEventArgs e)
         {
             moving = false;
@@ -280,6 +332,9 @@ namespace Paint
             }
         }
 
+        /**
+		 * Cleares paint panel
+		 */
         private void btnClearAll_Click(object sender, EventArgs e)
         {
             txtCommand.Text = "";
@@ -289,6 +344,9 @@ namespace Paint
             }
         }
 
+        /**
+		 * Saves program
+		 */
         private void btnSave_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
@@ -303,6 +361,9 @@ namespace Paint
             
         }
 
+        /**
+		 * executes codes
+		 */
         private void btnRun_Click(object sender, EventArgs e)
         {
             hasDrawOrMoveValue = false;
@@ -335,9 +396,11 @@ namespace Paint
                     g.FillRectangle(myBrush, e.X, e.Y, 24, 24);
                 }                
             }
-
-
         }
+
+        /**
+		 * loads command to draw and move pointer
+		 */
         private void loadCommand()
         {
             int numberOfLines = txtCommand.Lines.Length;
@@ -377,10 +440,13 @@ namespace Paint
                 if (!oneLineCommand.Equals(""))
                 {
                     RunCommand(oneLineCommand);
-                }
-                    
+                }       
             }
         }
+
+        /**
+		 * The code are executed when the button is clicked
+		 */
         private void RunCommand(String oneLineCommand) {
             
             Boolean hasPlus = oneLineCommand.Contains('+');
@@ -531,6 +597,11 @@ namespace Paint
                 
         }
 
+        /// <summary>
+		/// Returns the size of structure
+		/// </summary>
+		/// <param name="lineCommand"></param>
+		/// <returns></returns>
         private int GetSize(string lineCommand)
         {
             int value = 0;
@@ -556,6 +627,9 @@ namespace Paint
             return value;
         }
 
+        /**
+		 *  Initiate shapes and figure to build shapes
+		 */
         private void sendDrawCommand(string lineOfCommand)
         {
             String[] shapes = { "circle", "rectangle", "triangle", "polygon" };
@@ -724,6 +798,10 @@ namespace Paint
             }             
         }
 
+        /// <summary>
+		/// initiates loop 
+		/// </summary>
+		/// <returns></returns>
         private int GetEndifEndLineNumber()
         {
             int numberOfLines = txtCommand.Lines.Length;
@@ -742,6 +820,10 @@ namespace Paint
             return lineNum;
         }
 
+        /// <summary>
+		/// initiates if there is an if clause
+		/// </summary>
+		/// <returns></returns>
         private int GetIfStartLineNumber()
         {
             int numberOfLines = txtCommand.Lines.Length;
@@ -768,6 +850,10 @@ namespace Paint
             return lineNum;
         }
 
+        /// <summary>
+		/// Initiates loops
+		/// </summary>
+		/// <returns></returns>
         private int GetLoopEndLineNumber()
         {
             int numberOfLines = txtCommand.Lines.Length;
@@ -819,6 +905,9 @@ namespace Paint
 
         }
 
+        /**
+		 * Draw Polygon
+		 */
         private void DrawPolygon(int v1, int v2, int v3, int v4, int v5, int v6, int v7, int v8)
         {
             Pen myPen = new Pen(mainColor);
@@ -841,6 +930,10 @@ namespace Paint
 
             g.DrawPolygon(myPen, pnt);
         }
+
+        /**
+		 * Draw Polygon
+		 */
         private void DrawPolygon(int v1, int v2, int v3, int v4, int v5,int v6, int v7, int v8, int v9, int v10)
         {
             Pen myPen = new Pen(mainColor);
@@ -866,6 +959,9 @@ namespace Paint
             g.DrawPolygon(myPen, pnt);            
         }
 
+        /**
+		 * Draws a triangle 
+		 */
         private void DrawTriangle(int rBase, int adj, int hyp)
         {
             Pen myPen = new Pen(mainColor);
