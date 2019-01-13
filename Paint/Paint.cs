@@ -788,28 +788,34 @@ namespace Paint
 
         private int GetLoopStartLineNumber()
         {
-            int numberOfLines = txtCommand.Lines.Length;
-            int lineNum = 0;
+            try { 
+                int numberOfLines = txtCommand.Lines.Length;
+                int lineNum = 0;
 
-            for (int i = 0; i < numberOfLines; i++)
-            {
-                String oneLineCommand = txtCommand.Lines[i];
-                oneLineCommand = Regex.Replace(oneLineCommand, @"\s+", " ");
-                string[] words = oneLineCommand.Split(' ');
-                //removing white spaces in between words
-                for (int j = 0; j < words.Length; j++)
+                for (int i = 0; i < numberOfLines; i++)
                 {
-                    words[j] = words[j].Trim();
-                }
-                String firstWord = words[0].ToLower();
-                oneLineCommand = oneLineCommand.Trim();
-                if (firstWord.Equals("loop"))
-                {
-                    lineNum = i + 1;
+                    String oneLineCommand = txtCommand.Lines[i];
+                    oneLineCommand = Regex.Replace(oneLineCommand, @"\s+", " ");
+                    string[] words = oneLineCommand.Split(' ');
+                    //removing white spaces in between words
+                    for (int j = 0; j < words.Length; j++)
+                    {
+                        words[j] = words[j].Trim();
+                    }
+                    String firstWord = words[0].ToLower();
+                    oneLineCommand = oneLineCommand.Trim();
+                    if (firstWord.Equals("loop"))
+                    {
+                        lineNum = i + 1;
                     
+                    }
                 }
+                return lineNum;
             }
-            return lineNum;
+            catch(Exception e)
+            {
+                return 0;
+            }
 
         }
 
@@ -901,13 +907,6 @@ namespace Paint
 
         }
 
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            {
-                MessageBox.Show("ObjectCreator Version 1.0");
-                loadCommand();
-            }
-        }
 
         private void viewOnlineToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -917,6 +916,11 @@ namespace Paint
 
             driver.FindElement(By.Id("login_field")).SendKeys("koolrik");
             driver.FindElement(By.Id("password")).SendKeys("Koolrik1590");
+        }
+
+        private void aboutToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
         }
 
         private void DrawRectangle(int width, int height)
