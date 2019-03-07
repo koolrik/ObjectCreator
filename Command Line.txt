@@ -1,0 +1,37 @@
+DrawTo 50,50
+MoveTo 100,100
+Circle 100
+Rectangle 100, 100
+Triangle 100, 100, 100
+Polygon 50,150,100,100,200,50,250,25
+Polygon 50,150,100,100,200,50,250,25,50,50
+
+
+Radius = 20
+Width = 20
+Height = 20
+Loop 4
+	Circle radius
+	Radius+10
+	Rectangle width, height
+	Width+10
+	Height + 10
+Endloop
+
+repeat 4 circle radius+10
+repeat 4 rectangle size+10
+repeat 4 triangle size+10
+
+counter = 5
+If counter = 5 then 
+	radius+25
+	Circle radius
+EndIf
+
+
+Radius = 20
+Loop 4
+	Circle radius
+	Radius+10	
+Endloop
+Rectangle 100, 100
